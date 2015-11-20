@@ -7,8 +7,19 @@
 ;; back, just put following code here.
 (menu-bar-mode t)
 
+;; Set Chinese-fonts-setup
+(require 'chinese-fonts-setup)
+
+;;Using evil-org-mode for keybinding of Org-mode
+(require 'evil-org)
+;;Using evil-fcitx for better evil Chinese Input
+(require 'evil-fcitx)
+
+;; Import Org-ioslide
+(require 'ox-ioslide)
+(require 'ox-ioslide-helper)
 ;;; You email address
-(setq user-mail-address "xiaohanyu1988@gmail.com")
+(setq user-mail-address "allen.woods@foxmail.com")
 
 ;;; Calendar settings
 ;; you can use M-x sunrise-sunset to get the sun time

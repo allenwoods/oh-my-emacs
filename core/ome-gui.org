@@ -10,11 +10,13 @@ This is part of [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
 
 #+NAME: gui-el-get-packages
 #+CAPTION: El-get packages for ome-gui module
-| Package         | Status   | Description                            |
-|-----------------+----------+----------------------------------------|
-| [[https://github.com/bbatsov/solarized-emacs][solarized-emacs]] | Required | Adopt this as the default color-theme. |
-| [[https://github.com/jonathanchu/emacs-powerline][emacs-powerline]] | Required | Eye candy for Emacs mode line.         |
-| [[https://github.com/coldnew/linum-relative][linum-relative]]  | Required | Eye candy for Emacs linum-mode.        |
+| Package             | Status   | Description                                      |
+|---------------------+----------+--------------------------------------------------|
+| [[https://github.com/bbatsov/solarized-emacs][solarized-emacs]]     | Required | Adopt this as the default color-theme.           |
+| [[https://github.com/jonathanchu/emacs-powerline][emacs-powerline]]     | Required | Eye candy for Emacs mode line.                   |
+| [[https://github.com/coldnew/linum-relative][linum-relative]]      | Required | Eye candy for Emacs linum-mode.                  |
+| [[https://github.com/tumashu/chinese-fonts-setup][chinese-fonts-setup]] | Required | Enforcing double-width Chinese character display |
+
 
 * Basic GUI Settings
 #+NAME: gui-basics
@@ -70,6 +72,20 @@ self-adapting.
     (set-face-attribute
      'default nil :font "Monaco 12"))
 #+END_SRC
+
+* Enforcing double-width Chinese character display
+  :PROPERTIES:
+  :CUSTOM_ID: chinese-font
+  :END:
+=chinese-fonts-setup= is a fonts config tool enforcing double-width Chinese
+character display, it can make the table with both Chinese and English display
+more comfortable.
+
+#+NAME: chinese-font
+#+BEGIN_SRC emacs-lisp
+(ome-install 'chinese-fonts-setup)
+#+END_SRC
+
 
 * Full screen support
   :PROPERTIES:
